@@ -9,9 +9,6 @@ import numpy as np
 import plotly.graph_objects as go
 import plotly.express as px
 import folium
-app = dash.Dash()
-server = app.server
-
 data = pd.read_csv("C:/Users/saroj/Documents/GitHub/383dash_heroku/choleraDeaths.tsv", sep='\t')
 data["Attack_death_total"] = data.apply(lambda row: row.Attack + row.Death, axis=1)
 fig = go.Figure(data=[go.Table(
@@ -130,3 +127,5 @@ for i in range(len(dataa)):
                 "<li>Latitude: " + str(dataa.iloc[i, 1]) + "</li>",
     ).add_to(base_map)
 base_map
+app = dash.Dash()
+server = app.server
