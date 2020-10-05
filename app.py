@@ -9,7 +9,7 @@ import numpy as np
 import plotly.graph_objects as go
 import plotly.express as px
 import folium
-app = dash.Dash(__name__)
+app = dash.Dash()
 server = app.server
 
 data = pd.read_csv("C:/Users/saroj/Documents/GitHub/383dash_heroku/choleraDeaths.tsv", sep='\t')
